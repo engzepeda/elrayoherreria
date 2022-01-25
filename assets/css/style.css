@@ -611,7 +611,7 @@ a,
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(66, 26, 107, 0.9);
+  background-color: rgba(153, 52, 38, 0.9);
 }
 
 .landing-reason {
@@ -1486,7 +1486,7 @@ General Styles - Owlcarousel
 /* Landing Page Header */
 .landing-header:before {
   position: absolute;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(119, 47, 109, 0.52) 95%, rgba(115, 35, 105, 0.58) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(233, 47, 47, 0.52) 95%, rgba(236, 90, 53, 0.58) 100%);
   content: " ";
   height: 100%;
   width: 100%;
