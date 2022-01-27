@@ -636,7 +636,7 @@ a,
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(66, 60, 130, 0.5);
+  background-color: rgba(235, 78, 78, 0.5);
 }
 
 .alert i {
@@ -970,7 +970,7 @@ blockquote {
 }
 
 .free-trial {
-  background-color: rgba(88, 20, 158, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   color: #FFFFFF;
 }
 
