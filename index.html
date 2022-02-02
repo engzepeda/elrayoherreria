@@ -52,20 +52,6 @@
     <!-- Main stylesheet and color file-->
     <link href="assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
-    <script>
-      function initMap() {
-        console.log("hello");
-        const uluru = { lat: -25.344, lng: 131.036 };
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: uluru,
-        });
-        const marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-        });
-      }
-    </script>
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
@@ -345,13 +331,7 @@
             </div><img src="assets/images/herreria/small-fire.jpg">
           </section> -->
           <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26910.934588318913!2d-117.03795784817659!3d32.52970366987268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9485a82ce42b3%3A0xc7b29cc12debea5e!2sZona%20R%C3%ADo%2C%2022010%20Tijuana%2C%20Baja%20California!5e0!3m2!1sen!2smx!4v1643319599236!5m2!1sen!2smx" style="width: 100%;" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-          <div id="map"></div>
-
-          <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-          <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwjAvTsFctGRGP-M3T69o_1NdPR4-odS8&callback=initMap&libraries=&v=weekly"
-            async
-          ></script>
+          <div id="googleMap" style="width:100%;height:400px;"></div>
           <footer class="footer bg-dark">
         </div>
           <div class="container">
@@ -386,5 +366,37 @@
     <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      function myMap() {
+        var store1= {lat: 32.5186762, lng: -116.8755046};
+        var store2= {lat: 32.5435835, lng: -116.9352653};
+        var center = {lat: 32.527464, lng: -116.895943};
+        var map = new google.maps.Map(document.getElementById('googleMap'), {
+          zoom: 13,
+          center: center
+        });
+        var marker = new google.maps.Marker({
+          position: store1,
+          map: map,
+          title: "Sucursal Cucapah",
+          url: "https://www.google.com/maps?q=32.5186762,-116.8733159&z=17&hl=en",
+          clickable: true
+        });
+        var marker2 = new google.maps.Marker({
+          position: store2,
+          map: map,
+          title:"Sucursal Otay",
+          url: "https://www.google.com/maps?q=32.5435835,-116.9352653&z=17&hl=en",
+          clickable: true
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          window.location.href = marker.url;
+        });
+        google.maps.event.addListener(marker2, 'click', function() {
+          window.location.href = marker2.url;
+        });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwjAvTsFctGRGP-M3T69o_1NdPR4-odS8&callback=myMap"></script>
   </body>
 </html>
