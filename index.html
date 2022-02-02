@@ -52,6 +52,20 @@
     <!-- Main stylesheet and color file-->
     <link href="assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+    <script>
+      function initMap() {
+        console.log("hello");
+        const uluru = { lat: -25.344, lng: 131.036 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
@@ -374,23 +388,3 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
-
-<script>
-  // window.onload="initMap()";
-  // Initialize and add the map
-  function initMap() {
-    console.log("hello");
-    // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.036 };
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
-      center: uluru,
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-      position: uluru,
-      map: map,
-    });
-  }
-</script>
