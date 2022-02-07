@@ -5,6 +5,7 @@ html {
   overflow-y: scroll;
   overflow-x: hidden;
   -ms-overflow-style: scrollbar;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -618,7 +619,7 @@ a,
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(255, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .landing-reason {
@@ -643,7 +644,7 @@ a,
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(255, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .alert i {
